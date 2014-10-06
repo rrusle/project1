@@ -1,0 +1,39 @@
+<%= form_for @accommodation do |f| %>
+	<p>
+		<%= f.label :image %>
+		<%= f.url_field :image %>
+	</p>
+
+	<p>
+		<%= f.label :bedroom %>
+		<%= f.text_field :bedroom %>
+	</p>
+
+	<p>
+		<%= f.label :bathroom %>
+		<%= f.text_field :bathroom %>
+	</p>
+
+	<p>
+		<%= f.label :carpark %>
+		<%= f.text_field :carpark %>
+	</p>
+
+	<p>
+		<%= f.label :suburb %>
+		<%= f.text_field :suburb %>
+	</p>
+
+	<p>
+		<%= f.label :price %>
+		<%= f.text_field :price %>
+	</p>
+
+	<p>
+		<%= f.label :detail %>
+		<%= f.text_field :detail %>
+	</p>
+
+	<%= f.submit %>
+
+<% end %>

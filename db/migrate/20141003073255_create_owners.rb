@@ -5,7 +5,7 @@ class CreateOwners < ActiveRecord::Migration
     	t.string :lastname
     	t.integer :contact
     	t.string :email
-    	t.text :image
+    	t.text :image 
     	t.timestamps
     end
   end
