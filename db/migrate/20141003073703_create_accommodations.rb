@@ -2,6 +2,7 @@ class CreateAccommodations < ActiveRecord::Migration
   def change
     create_table :accommodations do |t|
         t.integer :owner_id
+        t.text :address
     	t.text :image
     	t.integer :bedroom
     	t.integer :bathroom

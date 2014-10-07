@@ -1,0 +1,29 @@
+<%= form_for @owner do |f| %>
+	<p>
+		<%= f.label :firstname %>
+		<%= f.text_field :firstname %>
+	</p>
+
+	<p>
+		<%= f.label :lastname %>
+		<%= f.text_field :lastname %>
+	</p>
+
+	<p>
+		<%= f.label :contact %>
+		<%= f.telephone_field :contact %>
+	</p>
+
+	<p>
+		<%= f.label :email %>
+		<%= f.email_field :email %>
+	</p>
+
+	<p>
+		<%= f.label :image %>
+		<%= f.url_field :image %>
+	</p>
+
+	<%= f.submit %>
+
+<% end %>

@@ -1,10 +1,13 @@
 
-<%= image_tag accommodation.suburb %>
 
-<%= accommodation.suburb %>
-<%= accommodation.price %>
-<%= accommodation.bedroom %>
-<%= accommodation.bathroom %>
-<%= accommodation.carpark %>
+<%= @accommodation.suburb %>
+<%= @accommodation.price %>
+<%= @accommodation.bedroom %>
+<%= @accommodation.bathroom %>
+<%= @accommodation.carpark %>
+<%= @accommodation.detail %>
+<%= image_tag @accommodation.image, :class => 'photo'%>
 
-<%= accommodation.detail %>
+
+<%= link_to 'Edit', edit_accommodation_path %>
+<%= link_to 'Delete', @accommodation, :method => :delete, :data => { :confirm => 'Are you sure?' } %>

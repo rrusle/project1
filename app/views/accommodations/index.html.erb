@@ -1,7 +1,9 @@
 this page will list all of the current rental property
 
 <% @accommodations.each do |accommodation| %>
-	<%= image_tag accommodation.image %>
-	<%= accommodation.suburb %>
-	<%= accommodation.price %>
+
+	<ul>
+		<li><%= link_to(accommodation.address,accommodation_path(accommodation))-%></li>
+	</ul>
+
 <% end %>

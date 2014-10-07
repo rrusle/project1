@@ -4,6 +4,7 @@
 #
 #  id         :integer          not null, primary key
 #  owner_id   :integer
+#  address    :text
 #  image      :text
 #  bedroom    :integer
 #  bathroom   :integer

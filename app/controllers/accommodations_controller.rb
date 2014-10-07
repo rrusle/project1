@@ -4,8 +4,8 @@ class AccommodationsController < ApplicationController
 	end 
 
 	def create 
-		@accommodation =Accommodation.create accommodation_params
-		redirect_to accommodation_path
+		@accommodation = Accommodation.create accommodation_params
+		redirect_to accommodation_path(@accommodation)
 	end 
 
 	def new 
@@ -18,18 +18,21 @@ class AccommodationsController < ApplicationController
 
 	def show 
 		@accommodation = Accommodation.find params[:id]
-		redirect_to accommodation_path
 	end 
 
 	def update
+		@accommodation = Accommodation.find params[:id]
+		@accommodation.update accommodation_path
 
 	end 
 
 	def destroy 
+		@accommodation = Accommodation.find params[:id]
+		@accommodation.destroy
 	end 
 
 	private 
 	def accommodation_params
-		params.require(:accommodation).permit(:image, :bedroom, :bathroom, :carpark, :suburb, :price, :detail)
+		params.require(:accommodation).permit(:image, :bedroom, :bathroom, :carpark,:address, :suburb, :price, :detail)
 	end 
 end 

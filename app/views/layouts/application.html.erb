@@ -7,7 +7,16 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<ul>
+	<li><%= link_to('Owner', owners_path) %></li>
+	<li><%= link_to('New Owner', new_owner_path) %></li>
+</ul>
+<ul>
+	<li><%= link_to('Accommodation', accommodations_path) %></li>
+	<li><%= link_to('New Accommodation', new_accommodation_path)  %></li> 
+	<!-- if @current_user -->
+	<li>LOLO</li>
+</ul>
 <%= yield %>
 
 </body>

@@ -2,10 +2,12 @@ class OwnersController < ApplicationController
 
 	def index
 		@owners = Owner.all
+
 	end 
 
 	def create
 		@owner = Owner.create owner_params
+		redirect_to owner_path
 	end
 
 	def new 

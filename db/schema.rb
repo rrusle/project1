@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20141003073703) do
 
   create_table "accommodations", force: true do |t|
     t.integer  "owner_id"
+    t.text     "address"
     t.text     "image"
     t.integer  "bedroom"
     t.integer  "bathroom"
