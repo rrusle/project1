@@ -14,6 +14,8 @@ class AccommodationsController < ApplicationController
 
 	def edit 
 		@accommodation = Accommodation.find params[:id]
+		#@accommodation.update accommodation_path
+		#redirect_to accommodation_path(@accommodation)
 	end 
 
 	def show 
@@ -22,17 +24,20 @@ class AccommodationsController < ApplicationController
 
 	def update
 		@accommodation = Accommodation.find params[:id]
-		@accommodation.update accommodation_path
+		@accommodation.update accommodation_params
+		redirect_to accommodation_path
+		
 
 	end 
 
 	def destroy 
 		@accommodation = Accommodation.find params[:id]
 		@accommodation.destroy
+		redirect_to accommodations_path
 	end 
 
 	private 
 	def accommodation_params
-		params.require(:accommodation).permit(:image, :bedroom, :bathroom, :carpark,:address, :suburb, :price, :detail)
+		params.require(:accommodation).permit(:image, :bedroom, :bathroom, :carpark, :address, :suburb, :price, :detail)
 	end 
 end 

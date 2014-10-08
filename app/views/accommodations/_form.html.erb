@@ -1,44 +1,48 @@
-<%= form_for @accommodation do |f| %>
-	<p>
-		<%= f.label :image %>
-		<%= f.url_field :image %>
-	</p>
+<div class="form">
 
-	<p>
-		<%= f.label :bedroom %>
-		<%= f.text_field :bedroom %>
-	</p>
+	<%= form_for @accommodation do |f| %>
+		<p>
+			<%= f.label :image %>
+			<%= f.url_field :image %>
+		</p>
 
-	<p>
-		<%= f.label :bathroom %>
-		<%= f.text_field :bathroom %>
-	</p>
+		<p>
+			<%= f.label :bedroom %>
+			<%= f.select :bedroom, options_for_select([['ONE', 1],['TWO', 2],['THREE',3]]) %>
+		</p>
 
-	<p>
-		<%= f.label :carpark %>
-		<%= f.text_field :carpark %>
-	</p>
+		<p>
+			<%= f.label :bathroom %>
+			<%= f.select :bathroom, options_for_select([['ONE', 1],['TWO', 2],['THREE',3]]) %>
+		</p>
 
-	<p>
-		<%= f.label :address %>
-		<%= f.text_field :address %>
-	</p>
+		<p>
+			<%= f.label :carpark %>
+			<%= f.select :carpark, options_for_select([['ONE', 1],['TWO', 2],['THREE',3]]) %>
+		</p>
 
-	<p>
-		<%= f.label :suburb %>
-		<%= f.text_field :suburb %>
-	</p>
+		<p>
+			<%= f.label :address %>
+			<%= f.text_field :address %>
+		</p>
 
-	<p>
-		<%= f.label :price %>
-		<%= f.text_field :price %>
-	</p>
+		<p>
+			<%= f.label :suburb %>
+			<%= f.text_field :suburb %>
+		</p>
 
-	<p>
-		<%= f.label :detail %>
-		<%= f.text_field :detail %>
-	</p>
+		<p>
+			<%= f.label :price %>
+			<%= f.text_field :price %>
+		</p>
 
-	<%= f.submit %>
+		<p>
+			<%= f.label :detail %>
+			<%= f.text_field :detail %>
+		</p>
 
-<% end %>
+		<p>	<%= f.submit %></p>
+
+	<% end %>
+
+</div>

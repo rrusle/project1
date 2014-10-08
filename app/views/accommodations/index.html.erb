@@ -1,9 +1,10 @@
-this page will list all of the current rental property
+<p>Your current listing</p>
 
 <% @accommodations.each do |accommodation| %>
 
 	<ul>
-		<li><%= link_to(accommodation.address,accommodation_path(accommodation))-%></li>
+		<li><%= link_to(accommodation.address,accommodation_path(accommodation)) %></li>
+		
 	</ul>
 
 <% end %>

@@ -1,4 +1,31 @@
+/*body {
+	margin: 0;
+	background-image: url('http://st.houzz.com/simgs/e6d11353025f8d88_4-3866/modern-patio.jpg'); 
+	background-repeat: no-repeat;
+	background-size: 100%;
+}*/
+
 .photo {
 	max-width: 200px;
 	max-height: 200px;
 }
+
+div.form {
+	margin-left: 100px;
+}
+.form p {
+	width: 100px;
+}
+.form p select {
+	width: 125px;
+}
+
+ul li {
+	list-style: none;
+	display: inline-block;
+}
+
+li {
+	list-style: none;
+}
+

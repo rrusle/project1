@@ -1,12 +1,15 @@
 
-
-<%= @accommodation.suburb %>
+<p><%= image_tag @accommodation.image, :class => 'photo'%></p>
+<li>Suburb: <%= @accommodation.suburb %></li>
+<li>Bedroom: <%= @accommodation.bedroom %></li>
+<li>Bathroom: <%= @accommodation.bathroom %></li>
+<li>Carpark: <%= @accommodation.carpark %></li>
 <%= @accommodation.price %>
-<%= @accommodation.bedroom %>
-<%= @accommodation.bathroom %>
-<%= @accommodation.carpark %>
-<%= @accommodation.detail %>
-<%= image_tag @accommodation.image, :class => 'photo'%>
+
+<li>Description: <%= @accommodation.detail %></li>
+<br>
+
+
 
 
 <%= link_to 'Edit', edit_accommodation_path %>
