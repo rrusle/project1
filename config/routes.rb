@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
- root :to => 'accommodations#index'
+ root :to => 'pages#index'
 
  resources :owners, :accommodations
 

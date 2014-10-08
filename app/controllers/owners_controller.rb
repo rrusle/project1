@@ -20,7 +20,7 @@ class OwnersController < ApplicationController
 	end 
 
 	def edit 
-		
+		@owner = Owner.find params[:id]
 	end
 
 	def show 

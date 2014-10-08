@@ -1,0 +1,10 @@
+<p>Current listing</p>
+
+<% @accommodations.each do |accommodation| %>
+
+	<ul>
+		<li><%= link_to(accommodation.address,accommodation_path(accommodation)) %></li>
+		
+	</ul>
+
+<% end %>

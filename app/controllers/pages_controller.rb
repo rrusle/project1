@@ -1,6 +1,7 @@
 class PagesController < ApplicationController 
 
 	def index
+		@accommodations = Accommodation.all
 	end
 
 
