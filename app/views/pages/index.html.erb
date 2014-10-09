@@ -8,14 +8,14 @@
 
 </div>
 
-<div class="container">
-	<h4 >Current listing</h4>
+<div >
+	<h4 class='listing'>Current listing</h4>
 
 
 
 	<% @accommodations.each do |accommodation| %>
 		<ul>
-			<li><%=  image_tag accommodation.image %></li>
+			<li><%=  image_tag accommodation.image, :class =>'avatar' %></li>
 			<li><%= link_to(accommodation.address,accommodation_path(accommodation)) %></li>
 			<li><%=  accommodation.suburb %></li>	
 		</ul>

@@ -1,63 +1,34 @@
-body {
-	margin: 0;
-	background-size: 100%;
-	opacity : 1;
-    z-index: -1;
+.content{
+    /*background-image: url('http://cdn.designhomes.pics/design/www.mybegin.com/wp-content/uploads/2013/05/Modern-Apartment-Interior-Design.jpg')*/;
+    background-repeat: no-repeat;
+    background-size: auto;
+    border-radius: 15px 15px 15px 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    min-height: 500px;
+    background-color: rgba(0,0,128,0.5);
+    opacity: 0.9;
 }
 
-ul.user_login{
-	position: absolute;
+.user_login{
+    position: absolute;
     top: 17px;
     right: 39px;
     color: red;
+  }
+  
+.listing{
+  padding: 1em;
 }
-
-.add_acco{
-	margin: 10px;
-
-}
-
-.photo {
-	max-width: 200px;
-	max-height: 200px;
-}
-
-div.form {
-	margin-left: 100px;
-}
-.form p {
-	width: 100px;
-	z-index: 1;
-}
-.form p select {
-	width: 125px;
-}
-
-ul li {
-	list-style: none;
-	/*display: inline-block;*/
-}
-
+.main{
+  max-width: 960px;
+  margin: auto;
+ 
+}  
 li {
-	list-style: none;
+  list-style: none;
 }
-
-.main_page{
-	margin-left: 40px;
-	margin-top: 22px;
-	margin-bottom: 20px;
-}
-
-
-.signup_form{
-	
-}
-
-
-body {
-  margin: 0;
-}
-
 nav {
   background-color: purple;
   color: white;
@@ -73,59 +44,24 @@ nav li {
   display: inline-block;
 }
 
-nav a {
-  color: white;
+.form {
+  width: 100px;
+  margin-left: 70px;
 }
-
-
-label{
-	min-width: 150px;
-	display:  inline-block;
-	text-align: right;
-}
-
-/*.container {
-    min-width: 100%;
-    min-height: 200px;
-    background-color: red;
-    position: fixed;
-}
-.content {
-    max-width: 280px;
-    min-height: 100px;
-    background-color: yellow;
-    position: relative;
-    margin: 50px 0 0 50px;
-}
-p { 
-    padding: 2em;
-}*/
-.main{
-
+.avatar{
+  max-width: 200px;
+  max-height: 200px;
 
 }
-
-.subcontent {
-    max-width: 280px;
-    min-height: 100px;
-    background-color: yellow;
-    position: relative;
-    margin: 50px 0 0 50px;
-}
-.container {
-  max-width: 960px;
-  margin: auto;
+p{
+  width: 125px;
 }
 
-.content {
-  	border-radius: 10px 10px 10px 10px;
-  	margin-left: auto;
-    margin-right: auto;
-    width: 80%;
-    min-height: 500px;
-    background-color: rgba(0,0,128,0.2);
-    opacity: 1;
-    /*background-color: #b0e0e6;*/
-    /*box-shadow: 0 1px 0 #000;*/
+.wrapper{
+  width: 450px;
+  margin-left: 0;
+  padding: 25px;
+  border-radius: 3px;
+  color: #fff;
+  background: rgba(51,51,51,0.5);
 }
-
