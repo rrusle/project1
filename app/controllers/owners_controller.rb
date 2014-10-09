@@ -5,6 +5,10 @@ class OwnersController < ApplicationController
 		@owners = @current_user
 	end 
 
+	def new 
+		@owner = Owner.new
+	end 
+	
 	def create
 		@owner = Owner.new owner_params
 		if @owner.save
@@ -15,9 +19,7 @@ class OwnersController < ApplicationController
 		end
 	end
 
-	def new 
-		@owner = Owner.new
-	end 
+	
 
 	def edit 
 		# @owners = @current_user

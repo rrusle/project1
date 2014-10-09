@@ -1,14 +1,11 @@
 class AccommodationsController < ApplicationController 
 	def index
-		binding.pry
 		@accommodations = Accommodation.all
 	end 
 
 	def create 
 		@accommodation = Accommodation.create accommodation_params
-		binding.pry
 		@accommodation.owner_id = @current_user.id
-		binding.pry
 		@accommodation.save
 		redirect_to accommodation_path(@accommodation)
 	end 

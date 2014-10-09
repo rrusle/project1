@@ -8,15 +8,16 @@
 
 </div>
 
-<div class="content">
+<div class="container">
 	<h4 >Current listing</h4>
 
 
 
 	<% @accommodations.each do |accommodation| %>
 		<ul>
-			<li><%= link_to(accommodation.address,accommodation_path(accommodation)) %></li>	
-			<li><%= link_to(accommodation.suburb,accommodation_path(accommodation)) %></li>
+			<li><%=  image_tag accommodation.image %></li>
+			<li><%= link_to(accommodation.address,accommodation_path(accommodation)) %></li>
+			<li><%=  accommodation.suburb %></li>	
 		</ul>
 	<% end %>
 
