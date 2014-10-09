@@ -1,2 +1,23 @@
-This is owner edit page 
-<%= render :partial => 'form' %>
+<div class="form">
+	<h3>Edit</h3> 
+	
+	<%= form_for @user do |f| %>
+  	
+  	<div>
+    	<%= f.label :name %>
+    	<%= f.text_field :name %>
+  	</div>
+  	
+  	<div>
+    	<%= f.label :email %>
+    	<%= f.email_field :email %>
+  	</div>
+ 
+ 		 <%= f.submit %>
+	
+	<% end %>
+
+</div>
+
+
+

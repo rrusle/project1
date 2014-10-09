@@ -20,7 +20,14 @@ class OwnersController < ApplicationController
 	end 
 
 	def edit 
+		# @owners = @current_user
 		@owner = Owner.find params[:id]
+		if @owner.update
+			session[:owner_id] = @owner_id
+			redirect_to owners_path
+		else
+			render :update
+		end 
 	end
 
 	def show 
@@ -28,9 +35,10 @@ class OwnersController < ApplicationController
 	end
 
 	def update 
-		owner = @current_user
-		owner.update owners_params
-		redirect_to edit_owner_path
+		# owner = @current_user
+		# owner.update owner_params
+		# redirect_to owners_path
+		 @owner = Owner.update
 	end
 
 	def destroy 

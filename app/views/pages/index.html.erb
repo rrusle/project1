@@ -1,10 +1,23 @@
-<p>Current listing</p>
+<div>
+	<form>
+		<input type="text" id="search" placeholder="enter the location">
+		<button> Search </button>
+	</form>
 
-<% @accommodations.each do |accommodation| %>
+	<form ><%= @search %></form>
 
-	<ul>
-		<li><%= link_to(accommodation.address,accommodation_path(accommodation)) %></li>
-		
-	</ul>
+</div>
 
-<% end %>
+<div class="content">
+	<h4 >Current listing</h4>
+
+
+
+	<% @accommodations.each do |accommodation| %>
+		<ul>
+			<li><%= link_to(accommodation.address,accommodation_path(accommodation)) %></li>	
+			<li><%= link_to(accommodation.suburb,accommodation_path(accommodation)) %></li>
+		</ul>
+	<% end %>
+
+</div>

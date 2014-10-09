@@ -1,10 +1,12 @@
-#this is owner sign in page
+<div class="form">
+	<h3><%= @owner.name %></h3>
 
  	<% @owners.each do |owner| %>
  	 	<ul>
-  		 	<li><%= link_to(owner.firstname, owner) %></li>
-			
+  		 	<li><%= link_to(owner.firstname, owner) %></li>	
    		</ul>
    		
  	<% end %>
+
+ </div>
 

@@ -1,16 +1,18 @@
+<div class="form">
+	<h3>Your current listing</h3> 
 
-<p><%= image_tag @accommodation.image, :class => 'photo'%></p>
-<li>Suburb: <%= @accommodation.suburb %></li>
-<li>Bedroom: <%= @accommodation.bedroom %></li>
-<li>Bathroom: <%= @accommodation.bathroom %></li>
-<li>Carpark: <%= @accommodation.carpark %></li>
-<%= @accommodation.price %>
+		<p><%= image_tag @accommodation.image, :class => 'photo'%></p>
+		<li>Suburb: <%= @accommodation.suburb %></li>
+		<li>Bedroom: <%= @accommodation.bedroom %></li>
+		<li>Bathroom: <%= @accommodation.bathroom %></li>
+		<li>Carpark: <%= @accommodation.carpark %></li>
+		<li>Price: <%= @accommodation.price %></li>
 
-<li>Description: <%= @accommodation.detail %></li>
-<br>
+		<li>Description: <%= @accommodation.detail %></li>
+		<br>
 
-
-
-
-<%= link_to 'Edit', edit_accommodation_path %>
-<%= link_to 'Delete', @accommodation, :method => :delete, :data => { :confirm => 'Are you sure?' } %>
+<% if @current_user && @current_user.id = @accommodation.owner_id %>
+		<%= link_to 'Edit', edit_accommodation_path %>
+		<%= link_to 'Delete', @accommodation, :method => :delete, :data => { :confirm => 'Are you sure?' } %>
+<% end %>
+</div>

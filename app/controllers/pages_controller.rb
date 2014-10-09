@@ -4,5 +4,9 @@ class PagesController < ApplicationController
 		@accommodations = Accommodation.all
 	end
 
+	def show 
+		@search = Accommodation.find params[:search]
+	end 
+
 
 end 

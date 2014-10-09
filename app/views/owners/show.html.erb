@@ -1,1 +1,9 @@
-show page...
+<div class="form">
+	<h3><%= @owner.name %></h3> 
+	
+	<p>
+  		User since: <%= @owner.created_at.strftime '%B %m %Y' %>
+  		<%= image_tag @owner.image %>
+	</p>
+
+</div>
