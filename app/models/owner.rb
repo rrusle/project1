@@ -16,4 +16,5 @@
 class Owner < ActiveRecord::Base
 	has_secure_password
 	has_many :accommodations
+	validates :email, uniqueness: true
 end 
