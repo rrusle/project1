@@ -1,13 +1,16 @@
-<div><h3>Current listing</h3> 
+<div>
+	<h4 class="title">Current listing</h4> 
 
+<div class="list"> 
+	<% @accommodations.each do |accommodation| %>
 
-<% @accommodations.each do |accommodation| %>
+		<ul >
+			<li><%= link_to(accommodation.address,accommodation_path(accommodation)) %></li>
+			<li><%=  accommodation.suburb %></li>
+		</ul>
 
-	<ul>
-		<li><%= link_to(accommodation.address,accommodation_path(accommodation)) %></li>
-		
-	</ul>
+	<% end %>
+</div>
 
-<% end %>
 
 </div>

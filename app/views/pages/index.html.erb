@@ -1,24 +1,24 @@
-<div>
-	<form>
-		<input type="text" id="search" placeholder="enter the location">
-		<button> Search </button>
-	</form>
-
-	<form ><%= @search %></form>
-
-</div>
 
 <div >
-	<h4 class='listing'>Current listing</h4>
-
-
-
+	<h4 class='title'>Current listing</h4>
 	<% @accommodations.each do |accommodation| %>
+
+	<div class="front_image">
 		<ul>
-			<li><%=  image_tag accommodation.image, :class =>'avatar' %></li>
-			<li><%= link_to(accommodation.address,accommodation_path(accommodation)) %></li>
-			<li><%=  accommodation.suburb %></li>	
+			<li><%=  image_tag accommodation.image, :class =>'avatar' %></li>	
 		</ul>
+	</div>
+	
+	<div class ="front_display">
+		<ul>
+			<li><%= link_to(accommodation.address,accommodation_path(accommodation)) %></li>
+			<li><%=  accommodation.suburb %></li>
+			<li><%= accommodation.price, value= number_to_currency(accommodation.price) %></li>
+		</ul>
+	</div>
+	
+	
+
 	<% end %>
 
 </div>
