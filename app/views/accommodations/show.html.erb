@@ -1,11 +1,13 @@
 <div class="form">
-<% if @current_user && @current_user.id = @accommodation.owner_id %>
-
+	<div >
+		<p> <%= @accommodation.address %></p>
+	</div>
 	<div class="image">
 		
 		<p><%= image_tag @accommodation.image, :class => 'avatar'%></p>
 	</div>
 	<div class="details">
+
 		<ul>
 			<li>Suburb: <%= @accommodation.suburb %></li>
 			<li>Bedroom: <%= @accommodation.bedroom %></li>
@@ -15,8 +17,15 @@
 			<li>Description: <%= @accommodation.detail %></li>
 		</ul>
 		<br>
-		<%= link_to 'Edit', edit_accommodation_path %>
-		<%= link_to 'Delete', @accommodation, :method => :delete, :data => { :confirm => 'Are you sure?' } %>		
+		<% if @current_user && @current_user.id = @accommodation.owner_id %>
+			<ul>
+				<li><%= link_to 'Edit', edit_accommodation_path %></li>
+				<li><%= link_to 'Delete', @accommodation, :method => :delete, :data => { :confirm => 'Are you sure?' } %></li>
+			</ul>
+		
+			
+		
+		<% end %>	
 	</div>
-<% end %>
+
 </div>
