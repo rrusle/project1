@@ -7,11 +7,12 @@ Setup Instruction
 ---
 
 Firstly, special thanks to my both awesome instructors, Joel and Tarun. You guys are amazing!
-This project won't without your support.
+This project won't work without your support.
 
 This project is not for commercial purpose. Some feature will be added later on.
 
 Thanks for visiting my site.
+
 
 
 
